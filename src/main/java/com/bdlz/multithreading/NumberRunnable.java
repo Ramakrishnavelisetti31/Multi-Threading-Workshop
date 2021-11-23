@@ -1,11 +1,11 @@
 package com.bdlz.multithreading;
 
 public class NumberRunnable implements Runnable {
-
+    private CharacterThread characterThread;
     @Override
     public void run() {
         for (int i = 1; i <= 100; i++) {
-            if (CharacterThread.exit) {
+            if (characterThread.exit) {
                 break;
             } else {
                 System.out.println(i);

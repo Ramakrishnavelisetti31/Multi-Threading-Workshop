@@ -2,7 +2,7 @@ package com.bdlz.multithreading;
 
 public class CharacterThread extends Thread {
 
-    public static boolean exit = false;
+    public boolean exit = false;
     @Override
     public void run() {
         for (char i = 'a'; i <= 'z'; i++) {
@@ -13,7 +13,6 @@ public class CharacterThread extends Thread {
                 e.printStackTrace();
             }
         }
-
         exit = true;
     }
 }
